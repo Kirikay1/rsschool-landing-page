@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #E1D4C9;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+}
+
+.header-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    height: 60px;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    column-gap: 40px;
+    list-style-type: none;
+    padding-bottom: 4px;
+}
+
+.nav-list-link {
+    position: relative;
+    text-decoration: none;
+    color: var(--text-dark, #403F3D);
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    /* Desktop/Action/link & button */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    /* 24px */
+}
+
+.nav-list-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: -5px;
+    height: 2px;
+    background-color: #403F3D;
+    opacity: 0;
+    transition: .7s;
+}
+
+.nav-list-link:hover::after {
+    opacity: 1;
+    left: 0;
+    right: 0;
+}
+
+.coffee-menu-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: -5px;
+    height: 2px;
+    background-color: #403F3D;
+    opacity: 0;
+    transition: .7s;
+}
+
+.coffee-menu-link:hover::after {
+    opacity: 1;
+    left: 0;
+    right: 0;
+}
+
+.coffee-menu-link {
+    position: relative;
+    text-decoration: none;
+    color: var(--text-dark, #403F3D);
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    /* Desktop/Action/link & button */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    /* 24px */
+    display: flex;
+    column-gap: 8px;
+    padding-bottom: 4px;
+}
+
+.header-img {
+    border-radius: 40px;
+    background: url(img/img-hero.jpg), lightgray 50% / cover no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+
+.header-img-content {}
