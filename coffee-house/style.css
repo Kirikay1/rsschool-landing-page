@@ -368,13 +368,13 @@ body {
 }
 
 .Mobile-App-link {
+    box-sizing: border-box;
     border-radius: 100px;
     border: 1px solid var(--border-dark, #665F55);
-    padding: 12px 20px;
     width: 200px;
+    padding: 12px 20px;
     display: flex;
     column-gap: 8px;
-
     background: var(--background-body, #E1D4C9);
     align-items: center;
 }
