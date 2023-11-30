@@ -264,6 +264,7 @@ body {
     border: 1px solid var(--border-light, #C1B6AD);
     height: 506px;
     width: 310px;
+    cursor: pointer;
 }
 
 .coffe-box-img-content {
