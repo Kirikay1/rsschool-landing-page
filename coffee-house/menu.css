@@ -164,7 +164,7 @@ body {
     transition: 1s;
 }
 
-.offer-link:hover div p {
+.offer-link:hover div {
     background: var(--background-body, #E1D4C9);
     transition: 1s;
     color: var(--text-light, #E1D4C9);
