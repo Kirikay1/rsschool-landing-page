@@ -397,7 +397,7 @@ body {
     border-radius: 20px;
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: center;
 }
 
 .About-img-content2 {
@@ -411,8 +411,10 @@ body {
 }
 
 .About-img1 {
-    padding-top: 68px;
     transform: scale(1.1);
+    width: 660px;
+    height: 590px;
+    object-fit: cover;
 }
 
 .About-img1:hover {
@@ -421,8 +423,10 @@ body {
 }
 
 .About-img2 {
-    padding-bottom: 50px;
     transform: scale(1.1);
+    width: 660px;
+    height: 430px;
+    object-fit: cover;
 }
 
 .About-img2:hover {
@@ -431,18 +435,22 @@ body {
 }
 
 .About-img3 {
-    padding-top: 20px;
     transform: scale(1.1);
+    width: 660px;
+    height: 430px;
+    object-fit: cover;
 }
 
 .About-img3:hover {
-    transform: scale(1);
     transition: 1s;
+    transform: scale(1);
 }
 
 .About-img4 {
     transform: scale(1.1);
-    padding-top: 68px;
+    width: 660px;
+    height: 590px;
+    object-fit: cover;
 }
 
 .About-img4:hover {
