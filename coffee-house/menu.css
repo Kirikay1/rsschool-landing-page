@@ -3,9 +3,14 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     height: 100%;
     background: #E1D4C9;
 }
@@ -14,10 +19,6 @@ body {
     max-width: 1360px;
     margin: 0 auto;
     padding: 0 40px;
-}
-
-.header {
-    margin-bottom: 100px;
 }
 
 .header-menu {
@@ -71,7 +72,7 @@ body {
 .coffee-menu-link::after {
     content: "";
     position: absolute;
-    bottom: -5px;
+    bottom: 0px;
     height: 2px;
     background-color: #403F3D;
     transition: .7s;
@@ -148,7 +149,7 @@ body {
     box-sizing: border-box;
     text-decoration: none;
     border-radius: 100px;
-    border: 1px solid var(--border-light, #C1B6AD);
+    background: var(--background-container, #665F55);
     padding: 8px 16px 8px 8px;
     display: flex;
     justify-content: center;
@@ -156,12 +157,12 @@ body {
     column-gap: 8px;
 }
 
-.offer-link1:hover {
+.offer-link:hover {
     background: var(--background-container, #665F55);
     transition: 1s;
 }
 
-.offer-link1:hover div {
+.offer-link:hover div {
     background: var(--background-body, #E1D4C9);
     transition: 1s;
 }
@@ -180,16 +181,6 @@ body {
     column-gap: 8px;
 }
 
-.offer-link2:hover {
-    background: var(--background-container, #665F55);
-    transition: 1s;
-}
-
-.offer-link2:hover div {
-    background: var(--background-body, #E1D4C9);
-    transition: 1s;
-}
-
 .offer-link3 {
     width: 124px;
     height: 46px;
@@ -204,18 +195,21 @@ body {
     column-gap: 8px;
 }
 
-.offer-link3:hover {
-    background: var(--background-container, #665F55);
-    transition: 1s;
-}
-
-.offer-link3:hover div {
-    background: var(--background-body, #E1D4C9);
-    transition: 1s;
-}
-
 .offer-link-text {
     color: var(--text-dark, #403F3D);
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    /* Desktop/Action/link & button */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    /* 24px */
+}
+
+.offer-link-text1 {
+    color: var(--text-light, #E1D4C9);
     font-feature-settings: 'clig' off, 'liga' off;
 
     /* Desktop/Action/link & button */
@@ -239,32 +233,62 @@ body {
     height: 30px;
 }
 
+.offer-link-ico-container1 {
+    background: var(--background-body, #E1D4C9);
+}
+
 .coffe-box {
     display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
+    flex-direction: column;
+    row-gap: 40px;
     justify-content: center;
+    align-items: center;
+}
+
+.coffe-box-content1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+}
+
+.coffe-box-content2 {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
 }
 
 .coffe-box-container {
     border-radius: 40px;
     border: 1px solid var(--border-light, #C1B6AD);
-    width: 306px;
-    height: 510px;
+    height: 506px;
+    width: 310px;
+}
+
+.coffe-box-img-content {
+    overflow: hidden;
+    width: 310px;
+    height: 310px;
+    border-radius: 40px;
+
 }
 
 .coffe-box-img {
-    border-radius: 40px;
+    transform: scale(1.1);
+}
+
+.coffe-box-container:hover .coffe-box-img {
+    transform: scale(1.0);
+    transition: 0.5s;
 }
 
 .coffe-box-content {
     padding: 20px;
-    width: 310px;
-    height: 196px;
+    height: 156px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-sizing: border-box;
 }
 
 .coffe-box-title {
