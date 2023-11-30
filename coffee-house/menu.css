@@ -96,6 +96,7 @@ body {
     display: flex;
     column-gap: 8px;
     padding-bottom: 4px;
+    cursor: default;
 }
 
 .main {
@@ -155,6 +156,7 @@ body {
     justify-content: center;
     align-items: center;
     column-gap: 8px;
+    cursor: default;
 }
 
 .offer-link:hover {
@@ -162,9 +164,15 @@ body {
     transition: 1s;
 }
 
-.offer-link:hover div {
+.offer-link:hover div p {
     background: var(--background-body, #E1D4C9);
     transition: 1s;
+    color: var(--text-light, #E1D4C9);
+}
+
+.offer-link:hover p {
+    transition: 1s;
+    color: var(--text-light, #E1D4C9);
 }
 
 .offer-link2 {
