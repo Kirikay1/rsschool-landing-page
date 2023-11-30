@@ -186,13 +186,13 @@ body {
 }
 
 .header-img-button-svg {
-    position: absolute;
+    width: 0;
     opacity: 0;
 }
 
 .header-img-button:hover .header-img-button-svg {
-    position: static;
     padding-left: 8px;
+    width: 20px;
     opacity: 1;
     transition: 0.3s;
 }
