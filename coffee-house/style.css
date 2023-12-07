@@ -120,6 +120,7 @@ body {
     width: 44px;
     height: 44px;
     display: none;
+    box-sizing: border-box;
 }
 
 .header-img {
@@ -742,7 +743,13 @@ body {
 
 @media screen and (max-width: 768px) {
     .container {
-        max-width: 688px;
+        width: 688px;
+    }
+
+    .header-img-button-svg {
+        opacity: 1;
+        width: 20px;
+        padding-left: 8px;
     }
 
     .coffee-burger-menu {
@@ -759,5 +766,68 @@ body {
 
     .header-img-content {
         padding: 100px 60px;
+    }
+
+    .Favourites-Coffee-content {
+        width: 480px;
+    }
+
+    .slider {
+        justify-content: space-between;
+    }
+
+    .About-img-content2 {
+        display: none;
+    }
+
+    .About-container-img {
+        row-gap: 40px;
+    }
+
+    .About-img-content1 {
+        width: 688px;
+    }
+
+    .Mobile-App {
+        flex-direction: column;
+        row-gap: 100px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        padding: 100px 60px;
+        row-gap: 100px;
+    }
+
+    .footer-socials {
+        width: 100%;
+    }
+
+    .About-img-content1.disabled {
+        pointer-events: none;
+    }
+
+    .header-img-button.disabled {
+        pointer-events: none;
+    }
+
+    .Mobile-App-link.disabled {
+        pointer-events: none;
+    }
+
+    .Favourites-Coffee-svg-right.disabled {
+        pointer-events: none;
+    }
+
+    .Favourites-Coffee-svg-left.disabled {
+        pointer-events: none;
+    }
+
+    .footer-socials-svg.disabled {
+        pointer-events: none;
+    }
+
+    .footer-contacts-nav-list-link.disabled {
+        pointer-events: none;
     }
 }
