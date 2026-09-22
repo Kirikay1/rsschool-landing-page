@@ -374,6 +374,8 @@ body {
     font-size: 60px;
     font-style: normal;
     font-weight: 600;
+    font-optical-sizing: none;
+    font-variation-settings: 'opsz' 24;
     line-height: 125%;
     /* 75px */
 

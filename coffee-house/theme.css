@@ -4,7 +4,7 @@
     --background-container: #665f55;
     --text-dark: #403f3d;
     --text-light: #eadfd4;
-    --text-accent: #8a634d;
+    --text-accent: #b0907a;
     --text-accent-on-container: #d6b59b;
     --border-dark: #665f55;
     --border-light: #c1b6ad;
@@ -58,7 +58,10 @@ body {
     font-size: 27px;
     line-height: 1;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    transition:
+        background-color 0.3s,
+        color 0.3s,
+        border-color 0.3s;
 }
 
 .theme-toggle::before {
