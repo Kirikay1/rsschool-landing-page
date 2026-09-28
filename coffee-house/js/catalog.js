@@ -9,15 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let products = [];
     let activeCategory = 'coffee';
+    let isExpanded = false;
+    const compactCatalog = window.matchMedia('(max-width: 768px)');
 
     const createProductCard = (product, index) => {
         const card = document.createElement('article');
         card.className = 'coffe-box-container';
         card.dataset.productId = `${product.category}-${index + 1}`;
-
-        if (index >= 4) {
-            card.classList.add('coffe-box-container-off');
-        }
 
         const imageContainer = document.createElement('div');
         imageContainer.className = 'coffe-box-img-content';
@@ -61,7 +59,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    const updateProductVisibility = () => {
+        const cards = [...catalog.querySelectorAll('.coffe-box-container')];
+        const shouldCollapse = compactCatalog.matches && !isExpanded && cards.length > 4;
+
+        cards.forEach((card, index) => {
+            card.classList.toggle('coffe-box-container-off', shouldCollapse && index >= 4);
+        });
+
+        showMoreButton.classList.toggle('refresh-off', !shouldCollapse);
+    };
+
     const renderProducts = () => {
+        isExpanded = false;
+
         const oldCards = catalog.querySelectorAll('.coffe-box-container');
         oldCards.forEach((card) => card.remove());
 
@@ -71,8 +82,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const cards = categoryProducts.map(createProductCard);
         showMoreButton.before(...cards);
         showMoreButton.setAttribute('aria-label', `Show more ${activeCategory} products`);
-        showMoreButton.classList.toggle('refresh-off', categoryProducts.length <= 4);
+        updateProductVisibility();
     };
+
+    showMoreButton.addEventListener('click', () => {
+        isExpanded = true;
+        updateProductVisibility();
+    });
+
+    compactCatalog.addEventListener('change', () => {
+        isExpanded = false;
+        updateProductVisibility();
+    });
 
     categoryButtons.forEach((button) => {
         button.addEventListener('click', () => {
