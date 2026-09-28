@@ -6,9 +6,11 @@
         <title>Coffee House</title>
         <script src="js/theme.js"></script>
         <script src="js/burger-menu.js" defer></script>
+        <script src="js/slider.js" defer></script>
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="theme.css" />
         <link rel="stylesheet" href="burger-menu.css" />
+        <link rel="stylesheet" href="slider.css" />
         <link rel="shortcut icon" href="img/icon-coffee.ico" type="image/x-icon" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -197,7 +199,11 @@
                     </h2>
 
                     <div class="slider">
-                        <div class="Favourites-Coffee-svg-left">
+                        <button
+                            class="Favourites-Coffee-svg-left"
+                            type="button"
+                            aria-label="Previous slide"
+                        >
                             <svg
                                 aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -213,78 +219,89 @@
                                     stroke-linejoin="round"
                                 />
                             </svg>
+                        </button>
+
+                        <div
+                            class="row-slider"
+                            role="region"
+                            aria-label="Favorite coffee slider"
+                            tabindex="0"
+                        >
+                            <div class="slider-track">
+                                <div class="Favourites-Coffee-content">
+                                    <div class="Favourites-Coffee-img-container">
+                                        <img
+                                            class="Favourites-Coffee-content-img"
+                                            src="img/coffee-slider-1.png"
+                                            alt="S’mores Frappuccino"
+                                            width="480"
+                                            height="480"
+                                        />
+                                    </div>
+
+                                    <div class="Favourites-Coffee-container">
+                                        <h3 class="Favourites-Coffee-content-title">
+                                            S’mores Frappuccino
+                                        </h3>
+                                        <p class="Favourites-Coffee-content-text">
+                                            This new drink takes an espresso and mixes it with brown
+                                            sugar and cinnamon before being topped with oat milk.
+                                        </p>
+                                        <p class="Favourites-Coffee-content-title">$5.50</p>
+                                    </div>
+                                </div>
+
+                                <div class="Favourites-Coffee-content">
+                                    <div class="Favourites-Coffee-img-container">
+                                        <img
+                                            class="Favourites-Coffee-content-img"
+                                            src="img/coffee-slider-2.png"
+                                            alt="Caramel Macchiato"
+                                            width="480"
+                                            height="480"
+                                        />
+                                    </div>
+
+                                    <div class="Favourites-Coffee-container">
+                                        <h3 class="Favourites-Coffee-content-title">
+                                            Caramel Macchiato
+                                        </h3>
+                                        <p class="Favourites-Coffee-content-text">
+                                            Fragrant and unique classic espresso with rich
+                                            caramel-peanut syrup, with cream under whipped thick foam.
+                                        </p>
+                                        <p class="Favourites-Coffee-content-title">$5.00</p>
+                                    </div>
+                                </div>
+
+                                <div class="Favourites-Coffee-content">
+                                    <div class="Favourites-Coffee-img-container">
+                                        <img
+                                            class="Favourites-Coffee-content-img"
+                                            src="img/coffee-slider-3.png"
+                                            alt="Ice coffee"
+                                            width="480"
+                                            height="480"
+                                        />
+                                    </div>
+
+                                    <div class="Favourites-Coffee-container">
+                                        <h3 class="Favourites-Coffee-content-title">Ice coffee</h3>
+                                        <p class="Favourites-Coffee-content-text">
+                                            A popular summer drink that tones and invigorates. Prepared
+                                            from coffee, milk and ice.
+                                        </p>
+                                        <p class="Favourites-Coffee-content-title">$4.50</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="row-slider">
-                            <div class="Favourites-Coffee-content">
-                                <div class="Favourites-Coffee-img-container">
-                                    <img
-                                        class="Favourites-Coffee-content-img"
-                                        src="img/coffee-slider-1.png"
-                                        alt="S’mores Frappuccino"
-                                        width="480"
-                                        height="480"
-                                    />
-                                </div>
-
-                                <div class="Favourites-Coffee-container">
-                                    <h3 class="Favourites-Coffee-content-title">
-                                        S’mores Frappuccino
-                                    </h3>
-                                    <p class="Favourites-Coffee-content-text">
-                                        This new drink takes an espresso and mixes it with brown
-                                        sugar and cinnamon before being topped with oat milk.
-                                    </p>
-                                    <p class="Favourites-Coffee-content-title">$5.50</p>
-                                </div>
-                            </div>
-
-                            <div class="Favourites-Coffee-content Favourites-Coffee-content-none">
-                                <div class="Favourites-Coffee-img-container">
-                                    <img
-                                        class="Favourites-Coffee-content-img"
-                                        src="img/coffee-slider-2.png"
-                                        alt="Caramel Macchiato"
-                                        width="480"
-                                        height="480"
-                                    />
-                                </div>
-
-                                <div class="Favourites-Coffee-container">
-                                    <h3 class="Favourites-Coffee-content-title">
-                                        Caramel Macchiato
-                                    </h3>
-                                    <p class="Favourites-Coffee-content-text">
-                                        Fragrant and unique classic espresso with rich
-                                        caramel-peanut syrup, with cream under whipped thick foam.
-                                    </p>
-                                    <p class="Favourites-Coffee-content-title">$5.00</p>
-                                </div>
-                            </div>
-
-                            <div class="Favourites-Coffee-content Favourites-Coffee-content-none">
-                                <div class="Favourites-Coffee-img-container">
-                                    <img
-                                        class="Favourites-Coffee-content-img"
-                                        src="img/coffee-slider-3.png"
-                                        alt="Ice coffee"
-                                        width="480"
-                                        height="480"
-                                    />
-                                </div>
-
-                                <div class="Favourites-Coffee-container">
-                                    <h3 class="Favourites-Coffee-content-title">Ice coffee</h3>
-                                    <p class="Favourites-Coffee-content-text">
-                                        A popular summer drink that tones and invigorates. Prepared
-                                        from coffee, milk and ice.
-                                    </p>
-                                    <p class="Favourites-Coffee-content-title">$4.50</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="Favourites-Coffee-svg-right">
+                        <button
+                            class="Favourites-Coffee-svg-right"
+                            type="button"
+                            aria-label="Next slide"
+                        >
                             <svg
                                 aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -300,13 +317,28 @@
                                     stroke-linejoin="round"
                                 />
                             </svg>
-                        </div>
+                        </button>
                     </div>
 
-                    <div class="Favourites-Coffee-radio-container">
-                        <div class="Favourites-Coffee-radio"></div>
-                        <div class="Favourites-Coffee-radio Favourites-Coffee-radio2"></div>
-                        <div class="Favourites-Coffee-radio Favourites-Coffee-radio2"></div>
+                    <div class="Favourites-Coffee-radio-container" aria-label="Choose a slide">
+                        <button
+                            class="Favourites-Coffee-radio is-active"
+                            type="button"
+                            aria-label="Show slide 1"
+                            aria-current="true"
+                        ></button>
+                        <button
+                            class="Favourites-Coffee-radio"
+                            type="button"
+                            aria-label="Show slide 2"
+                            aria-current="false"
+                        ></button>
+                        <button
+                            class="Favourites-Coffee-radio"
+                            type="button"
+                            aria-label="Show slide 3"
+                            aria-current="false"
+                        ></button>
                     </div>
                 </section>
 
