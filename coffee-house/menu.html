@@ -6,6 +6,7 @@
         <title>Coffee House Menu</title>
         <script src="js/theme.js"></script>
         <script src="js/burger-menu.js" defer></script>
+        <script src="js/catalog.js" defer></script>
         <link rel="stylesheet" href="menu.css" />
         <link rel="stylesheet" href="theme.css" />
         <link rel="stylesheet" href="burger-menu.css" />
@@ -146,164 +147,46 @@
                     </h1>
 
                     <div class="offer-container">
-                        <a class="offer-link1" href="">
-                            <div class="offer-link-ico-container offer-link-ico-container1">
+                        <button
+                            class="offer-link offer-link1 is-active"
+                            type="button"
+                            data-category="coffee"
+                            aria-pressed="true"
+                        >
+                            <span class="offer-link-ico-container">
                                 <img src="img/menu-ico1.png" alt="" />
-                            </div>
-                            <p class="offer-link-text offer-link-text1">Coffee</p>
-                        </a>
+                            </span>
+                            <span class="offer-link-text">Coffee</span>
+                        </button>
 
-                        <a class="offer-link offer-link2" href="">
-                            <div class="offer-link-ico-container">
+                        <button
+                            class="offer-link offer-link2"
+                            type="button"
+                            data-category="tea"
+                            aria-pressed="false"
+                        >
+                            <span class="offer-link-ico-container">
                                 <img src="img/menu-ico2.png" alt="" />
-                            </div>
-                            <p class="offer-link-text">Tea</p>
-                        </a>
+                            </span>
+                            <span class="offer-link-text">Tea</span>
+                        </button>
 
-                        <a class="offer-link offer-link3" href="">
-                            <div class="offer-link-ico-container">
+                        <button
+                            class="offer-link offer-link3"
+                            type="button"
+                            data-category="dessert"
+                            aria-pressed="false"
+                        >
+                            <span class="offer-link-ico-container">
                                 <img src="img/menu-ico3.png" alt="" />
-                            </div>
-                            <p class="offer-link-text">Dessert</p>
-                        </a>
+                            </span>
+                            <span class="offer-link-text">Dessert</span>
+                        </button>
                     </div>
                 </section>
 
-                <section class="coffee-box">
-                    <div class="coffe-box-container">
-                        <div class="coffe-box-img-content">
-                            <img class="coffe-box-img" src="img/coffee-1.png" alt="Irish coffee" />
-                        </div>
-                        <div class="coffe-box-content">
-                            <div class="coffe-box-content-text">
-                                <h2 class="coffe-box-title">Irish coffee</h2>
-                                <p class="coffe-box-text">
-                                    Fragrant black coffee with Jameson Irish whiskey and whipped
-                                    milk
-                                </p>
-                            </div>
-                            <p class="coffe-box-price">$7.00</p>
-                        </div>
-                    </div>
-
-                    <div class="coffe-box-container">
-                        <div class="coffe-box-img-content">
-                            <img class="coffe-box-img" src="img/coffee-2.png" alt="Kahlua coffee" />
-                        </div>
-                        <div class="coffe-box-content">
-                            <div class="coffe-box-content-text">
-                                <h2 class="coffe-box-title">Kahlua coffee</h2>
-                                <p class="coffe-box-text">
-                                    Classic coffee with milk and Kahlua liqueur under a cap of
-                                    frothed milk
-                                </p>
-                            </div>
-                            <p class="coffe-box-price">$7.00</p>
-                        </div>
-                    </div>
-
-                    <div class="coffe-box-container">
-                        <div class="coffe-box-img-content">
-                            <img class="coffe-box-img" src="img/coffee-3.png" alt="Honey raf" />
-                        </div>
-                        <div class="coffe-box-content">
-                            <div class="coffe-box-content-text">
-                                <h2 class="coffe-box-title">Honey raf</h2>
-                                <p class="coffe-box-text">
-                                    Espresso with frothed milk, cream and aromatic honey
-                                </p>
-                            </div>
-                            <p class="coffe-box-price">$5.50</p>
-                        </div>
-                    </div>
-
-                    <div class="coffe-box-container">
-                        <div class="coffe-box-img-content">
-                            <img
-                                class="coffe-box-img"
-                                src="img/coffee-4.png"
-                                alt="Ice cappuccino"
-                            />
-                        </div>
-                        <div class="coffe-box-content">
-                            <div class="coffe-box-content-text">
-                                <h2 class="coffe-box-title">Ice cappuccino</h2>
-                                <p class="coffe-box-text">
-                                    Cappuccino with soft thick foam in summer version with ice
-                                </p>
-                            </div>
-                            <p class="coffe-box-price">$5.00</p>
-                        </div>
-                    </div>
-
-                    <div class="coffe-box-container coffe-box-container-off">
-                        <div class="coffe-box-img-content">
-                            <img class="coffe-box-img" src="img/coffee-5.png" alt="Espresso" />
-                        </div>
-                        <div class="coffe-box-content">
-                            <div class="coffe-box-content-text">
-                                <h2 class="coffe-box-title">Espresso</h2>
-                                <p class="coffe-box-text">Classic black coffee</p>
-                            </div>
-                            <p class="coffe-box-price">$4.50</p>
-                        </div>
-                    </div>
-
-                    <div class="coffe-box-container coffe-box-container-off">
-                        <div class="coffe-box-img-content">
-                            <img class="coffe-box-img" src="img/coffee-6.png" alt="Latte" />
-                        </div>
-                        <div class="coffe-box-content">
-                            <div class="coffe-box-content-text">
-                                <h2 class="coffe-box-title">Latte</h2>
-                                <p class="coffe-box-text">
-                                    Espresso coffee with the addition of steamed milk and dense milk
-                                    foam
-                                </p>
-                            </div>
-                            <p class="coffe-box-price">$5.50</p>
-                        </div>
-                    </div>
-
-                    <div class="coffe-box-container coffe-box-container-off">
-                        <div class="coffe-box-img-content">
-                            <img
-                                class="coffe-box-img"
-                                src="img/coffee-7.png"
-                                alt="Latte macchiato"
-                            />
-                        </div>
-                        <div class="coffe-box-content">
-                            <div class="coffe-box-content-text">
-                                <h2 class="coffe-box-title">Latte macchiato</h2>
-                                <p class="coffe-box-text">
-                                    Espresso with frothed milk and chocolate
-                                </p>
-                            </div>
-                            <p class="coffe-box-price">$5.50</p>
-                        </div>
-                    </div>
-
-                    <div class="coffe-box-container coffe-box-container-off">
-                        <div class="coffe-box-img-content">
-                            <img
-                                class="coffe-box-img"
-                                src="img/coffee-8.png"
-                                alt="Coffee with cognac"
-                            />
-                        </div>
-                        <div class="coffe-box-content">
-                            <div class="coffe-box-content-text">
-                                <h2 class="coffe-box-title">Coffee with cognac</h2>
-                                <p class="coffe-box-text">
-                                    Fragrant black coffee with cognac and whipped cream
-                                </p>
-                            </div>
-                            <p class="coffe-box-price">$6.50</p>
-                        </div>
-                    </div>
-
-                    <button type="button" class="refresh" aria-label="Show more coffee">
+                <section class="coffee-box" aria-live="polite">
+                    <button type="button" class="refresh" aria-label="Show more products">
                         <svg
                             aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg"

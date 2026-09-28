@@ -162,54 +162,34 @@ body {
     column-gap: 16px;
 }
 
-.offer-link1 {
-    width: 115px;
+.offer-link {
     height: 46px;
     box-sizing: border-box;
-    text-decoration: none;
     border-radius: 100px;
-    background: var(--background-container, #665f55);
+    border: 1px solid var(--border-light, #c1b6ad);
+    background: transparent;
     padding: 8px 16px 8px 8px;
     display: flex;
     justify-content: center;
     align-items: center;
     column-gap: 8px;
-    cursor: default;
+    font: inherit;
+    cursor: pointer;
+    transition:
+        background-color 0.5s,
+        border-color 0.5s;
 }
 
-.offer-link p,
-.offer-link div {
-    transition: 1s;
+.offer-link1 {
+    width: 115px;
 }
 
 .offer-link2 {
     width: 90px;
-    height: 46px;
-    box-sizing: border-box;
-    text-decoration: none;
-    border-radius: 100px;
-    border: 1px solid var(--border-light, #c1b6ad);
-    padding: 8px 16px 8px 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 8px;
-    transition: 1s;
 }
 
 .offer-link3 {
     width: 124px;
-    height: 46px;
-    box-sizing: border-box;
-    text-decoration: none;
-    border-radius: 100px;
-    border: 1px solid var(--border-light, #c1b6ad);
-    padding: 8px 16px 8px 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 8px;
-    transition: 1s;
 }
 
 .offer-link-text {
@@ -225,21 +205,11 @@ body {
     font-weight: 600;
     line-height: 150%;
     /* 24px */
+    transition: color 0.5s;
 }
 
-.offer-link-text1 {
+.offer-link.is-active .offer-link-text {
     color: var(--text-light, #e1d4c9);
-    font-feature-settings:
-        'clig' off,
-        'liga' off;
-
-    /* Desktop/Action/link & button */
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 150%;
-    /* 24px */
 }
 
 .offer-link-ico-container {
@@ -252,9 +222,16 @@ body {
     box-sizing: border-box;
     width: 30px;
     height: 30px;
+    transition: background-color 0.5s;
 }
 
-.offer-link-ico-container1 {
+.offer-link.is-active {
+    border-color: var(--background-container, #665f55);
+    background: var(--background-container, #665f55);
+    cursor: default;
+}
+
+.offer-link.is-active .offer-link-ico-container {
     background: var(--background-body, #e1d4c9);
 }
 
@@ -274,6 +251,19 @@ body {
     max-width: 310px;
     cursor: pointer;
     box-sizing: border-box;
+    animation: catalog-card-appear 0.35s ease both;
+}
+
+@keyframes catalog-card-appear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .coffe-box-img-content {
@@ -368,6 +358,19 @@ body {
     box-sizing: border-box;
     display: none;
     cursor: pointer;
+}
+
+.refresh.refresh-off {
+    display: none;
+}
+
+.catalog-error {
+    width: 100%;
+    color: var(--text-dark, #403f3d);
+    font-family: Inter;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
 }
 
 .footer {
@@ -532,18 +535,16 @@ body {
         right: 0;
     }
 
-    .offer-link:hover {
+    .offer-link:not(.is-active):hover {
         background: var(--background-container, #665f55);
-        transition: 1s;
+        border-color: var(--background-container, #665f55);
     }
 
-    .offer-link:hover div {
+    .offer-link:not(.is-active):hover .offer-link-ico-container {
         background: var(--background-body, #e1d4c9);
-        transition: 1s;
     }
 
-    .offer-link:hover p {
-        transition: 1s;
+    .offer-link:not(.is-active):hover .offer-link-text {
         color: var(--text-light, #e1d4c9);
     }
 
@@ -714,5 +715,21 @@ body {
 
     .footer-contacts {
         width: 100%;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .coffe-box-container-off {
+        display: block;
+    }
+
+    .refresh {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .coffe-box-container {
+        animation: none;
     }
 }
