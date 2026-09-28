@@ -124,7 +124,7 @@ body {
 .hero-img {
     border-radius: 40px;
     background:
-        url(img/img-hero.jpg),
+        url(../img/img-hero.jpg),
         lightgray 50% / cover no-repeat;
     background-position: center center;
     background-size: cover;
