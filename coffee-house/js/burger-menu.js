@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     burgerButton.addEventListener('click', () => {
+        navigation.classList.add('is-animated');
         const isOpen = burgerButton.getAttribute('aria-expanded') === 'true';
         setMenuState(!isOpen);
     });
@@ -53,6 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    mobileMedia.addEventListener('change', () => setMenuState(false));
+    mobileMedia.addEventListener('change', () => {
+        navigation.classList.remove('is-animated');
+        setMenuState(false);
+    });
     setMenuState(false);
 });
